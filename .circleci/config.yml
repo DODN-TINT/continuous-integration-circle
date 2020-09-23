@@ -15,7 +15,8 @@ jobs:
 
       - run:
           name: build the jekyll site
-          command: REPLACE-ME-WITH-BUILD-COMMAND
+          command: $(echo build_command | Out-Host; $?) -and $(echo world | Out-Host; $?)
+          shell: powershell.exe
 
       - run:
           name: notify build is finished
