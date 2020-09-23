@@ -50,12 +50,13 @@ workflows:
   version: 2.1
 
   build_and_test:
+    
     jobs:
       - build
-      - testlinks:
+      - testlinks
           requires:
             - build
-        
+     
       - run:
           name: notify build is finished
           command: echo "The build is finished!"
