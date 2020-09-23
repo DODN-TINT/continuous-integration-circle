@@ -52,11 +52,10 @@ workflows:
   build_and_test:
     
     steps:
-
+      - build
+      
       - testlinks
-          requires:
-            - build
-     
+    
       - run:
           name: notify build and test is finished
           command: echo "The build and test is finished!"
