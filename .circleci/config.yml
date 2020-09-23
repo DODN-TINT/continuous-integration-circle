@@ -51,7 +51,7 @@ workflows:
 
   build_and_test:
     
-    steps:
+    jobs:
       - build
       
       - testlinks
